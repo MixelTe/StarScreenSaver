@@ -1,3 +1,3 @@
-# Star screenSaver
+# Stars screenSaver
 
 ![](/docs/screenShot.jpg)
