@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -34,7 +35,7 @@ namespace StarScreen
 			{
 				Text = "Звёзды";
 
-				GroupBoxStar.Text = "Звезды";
+				GroupBoxStar.Text = "Звёзды";
 				DensityLbl.Text = "Плотность";
 				SizeLbl.Text = "Размер";
 				SpeedLbl.Text = "Скорость мерцания";
@@ -103,6 +104,19 @@ namespace StarScreen
 		{
 			_Settings.Save();
 			Close();
+		}
+
+		private void PictureBoxGitHub_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				Process.Start("https://github.com/MixelTe/StarScreenSaver");
+			}
+			catch (Exception)
+			{
+				MessageBox.Show("https://github.com/MixelTe/StarScreenSaver" + "\n\nCopied to clipboard", "StarScreen: Source code", MessageBoxButtons.OK, MessageBoxIcon.Information);
+				Clipboard.SetText("https://github.com/MixelTe/StarScreenSaver");
+			}
 		}
 	}
 }

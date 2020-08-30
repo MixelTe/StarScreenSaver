@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
 			this.GroupBoxStar = new System.Windows.Forms.GroupBox();
 			this.LifeTimeUnD = new System.Windows.Forms.NumericUpDown();
@@ -44,6 +45,8 @@
 			this.CreateConecionsChB = new System.Windows.Forms.CheckBox();
 			this.OkBtn = new System.Windows.Forms.Button();
 			this.ResetBtn = new System.Windows.Forms.Button();
+			this.PictureBoxGitHub = new System.Windows.Forms.PictureBox();
+			this.toolTipGitHub = new System.Windows.Forms.ToolTip(this.components);
 			this.GroupBoxStar.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.LifeTimeUnD)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.SizeUnD)).BeginInit();
@@ -51,6 +54,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.DensityUnD)).BeginInit();
 			this.GroupBoxConections.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.MaxLengthUnD)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.PictureBoxGitHub)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// GroupBoxStar
@@ -266,7 +270,7 @@
 			// OkBtn
 			// 
 			this.OkBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.OkBtn.Location = new System.Drawing.Point(157, 239);
+			this.OkBtn.Location = new System.Drawing.Point(155, 239);
 			this.OkBtn.Name = "OkBtn";
 			this.OkBtn.Size = new System.Drawing.Size(75, 23);
 			this.OkBtn.TabIndex = 2;
@@ -285,12 +289,33 @@
 			this.ResetBtn.UseVisualStyleBackColor = true;
 			this.ResetBtn.Click += new System.EventHandler(this.ResetBtn_Click);
 			// 
+			// PictureBoxGitHub
+			// 
+			this.PictureBoxGitHub.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.PictureBoxGitHub.Image = ((System.Drawing.Image)(resources.GetObject("PictureBoxGitHub.Image")));
+			this.PictureBoxGitHub.InitialImage = null;
+			this.PictureBoxGitHub.Location = new System.Drawing.Point(110, 239);
+			this.PictureBoxGitHub.Name = "PictureBoxGitHub";
+			this.PictureBoxGitHub.Size = new System.Drawing.Size(23, 23);
+			this.PictureBoxGitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.PictureBoxGitHub.TabIndex = 4;
+			this.PictureBoxGitHub.TabStop = false;
+			this.toolTipGitHub.SetToolTip(this.PictureBoxGitHub, "Source Code");
+			this.PictureBoxGitHub.Click += new System.EventHandler(this.PictureBoxGitHub_Click);
+			// 
+			// toolTipGitHub
+			// 
+			this.toolTipGitHub.AutoPopDelay = 5000;
+			this.toolTipGitHub.InitialDelay = 200;
+			this.toolTipGitHub.ReshowDelay = 100;
+			// 
 			// Form2
 			// 
 			this.AcceptButton = this.OkBtn;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(244, 274);
+			this.Controls.Add(this.PictureBoxGitHub);
 			this.Controls.Add(this.ResetBtn);
 			this.Controls.Add(this.OkBtn);
 			this.Controls.Add(this.GroupBoxConections);
@@ -309,6 +334,7 @@
 			this.GroupBoxConections.ResumeLayout(false);
 			this.GroupBoxConections.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.MaxLengthUnD)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.PictureBoxGitHub)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -330,5 +356,7 @@
 		private System.Windows.Forms.Label MaxLengthLbl;
 		private System.Windows.Forms.Button OkBtn;
 		private System.Windows.Forms.Button ResetBtn;
+		private System.Windows.Forms.PictureBox PictureBoxGitHub;
+		private System.Windows.Forms.ToolTip toolTipGitHub;
 	}
 }
