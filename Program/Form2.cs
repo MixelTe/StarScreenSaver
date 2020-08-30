@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace StarScreen
 		public Form2()
 		{
 			InitializeComponent();
+			
+			ChangeLanguage();
 
 			_Settings.Load();
 
@@ -24,6 +27,26 @@ namespace StarScreen
 			LifeTimeUnD.Minimum = StarsSettings.D_dLifeTime + 1;
 
 			SetFields();
+		}
+		private void ChangeLanguage()
+		{
+			if (CultureInfo.CurrentUICulture.Name == "ru-RU")
+			{
+				Text = "Звёзды";
+
+				GroupBoxStar.Text = "Звезды";
+				DensityLbl.Text = "Плотность";
+				SizeLbl.Text = "Размер";
+				SpeedLbl.Text = "Скорость мерцания";
+				LifeTimeLbl.Text = "Время жизни";
+
+				GroupBoxConections.Text = "Соединения";
+				CreateConecionsChB.Text = "Создавать соединения";
+				MaxLengthLbl.Text = "Макс. длина";
+
+				ResetBtn.Text = "Сбросить";
+				OkBtn.Text = "ОК";
+			}
 		}
 
 		private void SetFields()
